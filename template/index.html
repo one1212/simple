@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>세광교회 청년부</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+
+
+  <!-- 사용자 CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
 
-  <header>
-    <h2>세광교회 청년부</h2>
-    <nav>
-      <a href="#">부서소개</a>
-      <a href="#">말씀과 찬양</a>
-      <a href="#">선교와 나눔</a>
+  <header class="header">
+    <div class="left-box">
+      <img src="/img/세광 청년부 로고.jpg" alt="세광교회 청년부 로고" class="logo" />
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">청년부 소개</a>
+      <a href="#">부서 소개</a>
+      <a href="#">예배 시간 안내</a>
+      <a href="#">이번주 설교</a>
+      <a href="#">주보보기</a>
       <a href="#">커뮤니티</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>어두움에 빛을 비추는 생명 공동체</h1>
-    <p>복음 변화, 사랑 실천 <br/>고린도 후서 5:17~18</p>
-    <p><strong>여름 수련회 7월 11일(금)~13일(주일)</strong></p>
+  <input type="radio" name="slide" id="slide01" checked>
+  <input type="radio" name="slide" id="slide02">
+  <input type="radio" name="slide" id="slide03">
+
+
+
+
+  <!-- 슬라이드 wrapper -->
+  <div class="slidewrap">
+    <ul class="slidelist">
+      <li>
+        <label for="slide03" class="left"></label>
+        <img src="/img/발밤발밤.png" alt="발밤발밤" />
+        <label for="slide02" class="right"></label>
+      </li>
+      <li>
+        <label for="slide01" class="left"></label>
+        <img src="/img/세광 거룩한 방파제.jpg" alt="거룩한 방파제" />
+        <label for="slide03" class="right"></label>
+      </li>
+      <li>
+        <label for="slide02" class="left"></label>
+        <img src="/img/세광 알림톡.jpg" alt="세광 알림톡" />
+        <label for="slide01" class="right"></label>
+      </li>
+    </ul>
+  </div>
+  <!-- 슬라이더 박스 -->
+  <!-- <div class="slidewrap">
+    <ul class="slidelist"> -->
+  <!-- 슬라이드 1 -->
+  <!-- <li>
+        <label for="slide03" class="left"></label>
+        <iframe src="https://www.youtube.com/embed/XvQsTYly7Vg" title="YouTube video player" frameborder="0" allowfullscreen
+          class="slide-video"></iframe>
+        <label for="slide02" class="right"></label>
+      </li> -->
+  <!-- 슬라이드 2 -->
+  <!-- <li>
+        <label for="slide01" class="left"></label>
+        <iframe src="https://www.youtube.com/embed/rzp-CWrbqpU" title="YouTube video player" frameborder="0" allowfullscreen
+          class="slide-video"></iframe>
+        <label for="slide03" class="right"></label>
+      </li> -->
+  <!-- 슬라이드 3 -->
+  <!-- <li>
+        <label for="slide02" class="left"></label>
+        <iframe src="https://www.youtube.com/embed/HV0e2c7mrQ8" title="YouTube video player" frameborder="0" allowfullscreen
+          class="slide-video"></iframe>
+        <label for="slide01" class="right"></label>
+      </li>
+    </ul>
+  </div> -->
+    <section class="hero">
+  <h1>어두움에 빛을 비추는 생명 공동체</h1>
+  <p>복음 변화, 사랑 실천 <br />고린도 후서 5:17~18</p>
+  <p><strong>여름 수련회 7월 11일(금)~13일(주일)</strong></p>
   </section>
 
-  <section class="section">
+  <section class="section"> <!--밑에 부분-->
     <h2 class="section-title">비전과 설교</h2>
     <div class="cards">
       <div class="card">
@@ -35,14 +99,17 @@
       <div class="card">
         <img src="pastor.jpg" alt="전도사님 사진">
         <h3>다시 거룩한 교회</h3>
-        <p>손현구 전도사님<br/>공백</p>
+        <p>손현구 전도사님<br />공백</p>
       </div>
     </div>
   </section>
 
-  <footer>
+  <footer> <!--마지막-->
     &copy; 2025 세광교회. All Rights Reserved.
   </footer>
-
+  <!-- Body 맨 아래에 Swiper JS 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
+
 </html>
