@@ -2,35 +2,46 @@
 /* [1] 전체 페이지 기본 설정 */
 /* --------------------------------------------- */
 body {
-  margin: 0; /* 브라우저 기본 여백 제거 */
-  font-family: 'Noto Sans KR', sans-serif; /* 한글 웹폰트 설정 */
-  background-color: white; /* 배경색 흰색 */
-  color: #333; /* 기본 글자 색상 */
+  margin: 0;
+  /* 브라우저 기본 여백 제거 */
+  font-family: 'Noto Sans KR', sans-serif;
+  /* 한글 웹폰트 설정 */
+  background-color: white;
+  /* 배경색 흰색 */
+  color: #333;
+  /* 기본 글자 색상 */
 }
 
 /* --------------------------------------------- */
 /* [2] 헤더 영역 */
 /* --------------------------------------------- */
 .header {
-  display: flex; /* 내부 요소 가로 정렬 */
-  justify-content: space-between; /* 로고 좌측, 메뉴 우측 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  padding: 16px 48px; /* 안쪽 여백 */
+  display: flex;
+  /* 내부 요소 가로 정렬 */
+  justify-content: space-between;
+  /* 로고 좌측, 메뉴 우측 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  padding: 16px 48px;
+  /* 안쪽 여백 */
   background-color: white;
   height: 100px;
-  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  box-sizing: border-box;
+  /* 패딩 포함 크기 계산 */
 }
 
 .logo {
   height: 100px;
   width: auto;
-  object-fit: contain; /* 이미지 비율 유지 */
+  object-fit: contain;
+  /* 이미지 비율 유지 */
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px; /* 메뉴 간 간격 */
+  gap: 32px;
+  /* 메뉴 간 간격 */
 }
 
 .nav-links a {
@@ -152,7 +163,8 @@ input[name="slide"] {
 
 /* 전체 슬라이드 영역 */
 .slidewrap {
-  width: 80%; /*가득 채울 경우 100% 넣기*/
+  width: 80%;
+  /*가득 채울 경우 100% 넣기*/
   margin: 50px auto;
   overflow: hidden;
   position: relative;
@@ -160,10 +172,18 @@ input[name="slide"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 758px;
+  margin: 0 auto;
+}
+
 /* 슬라이드 목록 */
 .slidelist {
   display: flex;
-  width: 100%; /* 슬라이드가 3개일 경우 */
+  width: 100%;
+  /* 슬라이드가 3개일 경우 */
   transition: transform 0.5s;
   list-style: none;
   padding: 0;
@@ -184,24 +204,39 @@ input[name="slide"] {
 }
 
 /* 좌우 화살표 버튼 */
-.left, .right {
+.left,
+.right {
   position: absolute;
   top: 50%;
   width: 40px;
   height: 40px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 2;
 }
 
-.left::before, .right::before {
+.left::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
   width: 0;
   height: 0;
-  margin: auto;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
   border-style: solid;
   border-width: 10px;
 }
@@ -225,14 +260,46 @@ input[name="slide"] {
 }
 
 /* 슬라이드 전환 동작 (라디오 버튼에 따라 이동) */
-#slide01:checked ~ .slidewrap .slidelist {
+#slide01:checked~.slidewrap .slidelist {
   transform: translateX(0%);
 }
 
-#slide02:checked ~ .slidewrap .slidelist {
+#slide02:checked~.slidewrap .slidelist {
   transform: translateX(-100%);
 }
 
-#slide03:checked ~ .slidewrap .slidelist {
+#slide03:checked~.slidewrap .slidelist {
   transform: translateX(-200%);
+}
+
+.map-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* 세로 정렬 */
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#daumRoughmapContainer1749620535742 {
+  width: 640px;
+  height: 360px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.map-title {
+  font-size: 24px;
+  margin-top: 40px;
+  color: #333;
+  text-align: center;
+}
+
+.map-description {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0 20px;
+  text-align: center;
 }
