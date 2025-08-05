@@ -11,7 +11,9 @@
 <body>
     <header class="header">
         <div class="left-box">
-            <img src="/img/세광 청년부 로고.jpg" alt="세광교회 청년부" class="logo">
+            <a href="index.html">
+                <img src="/img/세광 청년부 로고.jpg" alt="세광교회 청년부 로고" class="logo" />
+            </a>
         </div>
         <nav class="nav-links">
             <a href="#">청년부 소개</a>
@@ -63,7 +65,23 @@
                 <div class="text-main">추천 찬양</div>
             </a>
 
-            
+            <script>
+                window.addEventListener('scroll', function () {
+                    const sideMenu = document.querySelector('.side-menu');
+                    const headerHeight = document.querySelector('.header').offsetHeight; // 헤더 높이
+                    const scrollY = window.scrollY;
+
+                    if (scrollY > headerHeight) {
+                        sideMenu.style.position = 'fixed';
+                        sideMenu.style.top = '20px'; // 화면 상단에서 20px 떨어짐
+                        sideMenu.style.left = sideMenu.offsetLeft + 'px'; // 기존 위치 유지
+                        sideMenu.style.width = '200px'; // 사이드 메뉴 고정 시 너비 유지
+                    } else {
+                        sideMenu.style.position = 'static'; // 원래 자리로
+                        sideMenu.style.width = ''; // 원래 스타일로
+                    }
+                });
+            </script>
 </body>
 
 </html>

@@ -157,3 +157,7 @@ body {
   border-top: 1px solid #ddd;
   margin: 20px 0;
 }
+.side-menu {
+  position: sticky;
+  top: 20px; /* 화면 상단에서 20px */
+}
