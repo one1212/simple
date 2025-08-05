@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>세광교회 청년부</title>
+  <link rel="stylesheet" href="../style/style.css" />
+
+
+  <!-- 사용자 CSS -->
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="left-box">
+      <img src="/img/세광 청년부 로고.jpg" alt="세광교회 청년부 로고" class="logo" />
+    </div>
+    
+    <nav class="nav-links">
+      <a href="Youth.html">청년부 소개</a>
+      <a href="Department.html">부서 소개</a>
+      <a href="#">예배 시간 안내</a>
+      <a href="#">이번주 설교</a>
+      <a href="#">주보보기</a>
+      <a href="#">커뮤니티</a>
+    </nav>
+  </header>
+
+  <input type="radio" name="slide" id="slide01" checked>
+  <input type="radio" name="slide" id="slide02">
+  <input type="radio" name="slide" id="slide03">
+
+
+
+
+  <!-- 슬라이드 wrapper -->
+  <div class="slidewrap">
+    <ul class="slidelist">
+      <li>
+        <label for="slide03" class="left"></label>
+        <img src="/img/발밤발밤.png" alt="발밤발밤" />
+        <label for="slide02" class="right"></label>
+      </li>
+      <li>
+        <label for="slide01" class="left"></label>
+        <img src="/img/세광 거룩한 방파제.jpg" alt="거룩한 방파제" />
+        <label for="slide03" class="right"></label>
+      </li>
+      <li>
+        <label for="slide02" class="left"></label>
+        <img src="/img/세광 알림톡.jpg" alt="세광 알림톡" />
+        <label for="slide01" class="right"></label>
+      </li>
+    </ul>
+  </div>
+  <section class="hero">
+    <h1>어두움에 빛을 비추는 생명 공동체</h1>
+    <p>여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요<br>
+      여호화는 내 생명의 능력이시니 내가 누구를 무서워 하리요<br>
+      시편 27:1</p>
+    <p><strong>여름 수련회 7월 11일(금)~13일(주일)</strong></p>
+  </section>
+
+
+  <!-- * 카카오맵 - 지도퍼가기 -->
+  <!-- 1. 지도 노드 -->
+  <div id="daumRoughmapContainer1749620535742" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+  <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+  <!-- 3. 실행 스크립트 -->
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      "timestamp": "1749620535742",
+      "key": "3d8bjgjdako",
+      "mapWidth": "640",
+      "mapHeight": "360"
+    }).render();
+  </script>
+
+  <h2 class="map-title">📍 우리 교회 위치</h2>
+  <p class="map-description">찾아오시는 길을 카카오맵으로 확인하세요!</p>
+
+  <table>
+    <tr>
+      <th>지하철편</th>
+      <td>도보이용: 10분 (한밭야구장 방향)<br>
+        버스이용: 3정거장, 보문오거리 정류장 하차</td>
+    </tr>
+    <tr>
+      <th>버스편</th>
+      <td>108번, 620번, 313번 (보문오거리 정류장 하차)<br>
+        701번, 311번, 317번, 615번 (대고오거리 정류장 하차)<br>
+        급행4번, 513번, 604번, 52번 (오토바이거리 정류장 하차)</td>
+    </tr>
+  </table>
+
+
+  <!-- <section class="section"> 밑에 부분
+    <h2 class="section-title">비전과 설교</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="vision-circle.png" alt="Vision Image">
+        <h3>나는 세상의 빛이라</h3>
+        <p>마 5:14</p>
+      </div>
+      <div class="card">
+        <img src="pastor.jpg" alt="전도사님 사진">
+        <h3>다시 거룩한 교회</h3>
+        <p>손현구 전도사님<br />공백</p>
+      </div>
+    </div>
+  </section> -->
+
+  <footer> <!--마지막-->
+    &copy; 2025 세광교회. All Rights Reserved.
+  </footer>
+  <!-- Body 맨 아래에 Swiper JS 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>

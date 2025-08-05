@@ -1,0 +1,159 @@
+/* --------------------------------------------- */
+/* [1] 전체 페이지 기본 설정 */
+/* --------------------------------------------- */
+body {
+  margin: 0;
+  /* 브라우저 기본 여백 제거 */
+  font-family: 'Noto Sans KR', sans-serif;
+  /* 한글 웹폰트 설정 */
+  background-color: white;
+  /* 배경색 흰색 */
+  color: #333;
+  /* 기본 글자 색상 */
+}
+
+/* --------------------------------------------- */
+/* [2] 헤더 영역 */
+/* --------------------------------------------- */
+.header {
+  display: flex;
+  /* 내부 요소 가로 정렬 */
+  justify-content: space-between;
+  /* 로고 좌측, 메뉴 우측 정렬 */
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  padding: 16px 48px;
+  /* 안쪽 여백 */
+  background-color: white;
+  height: 100px;
+  box-sizing: border-box;
+  /* 패딩 포함 크기 계산 */
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  /* 이미지 비율 유지 */
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  /* 메뉴 간 간격 */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* 메뉴 밑줄 애니메이션 */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+} 
+/* --------------------------------------------- */
+/* 여기부터 바꾸면 됨 */
+/* 사이드 메뉴 */
+.side-menu {
+  width: 200px;
+  padding: 40px 20px;
+}
+
+.side-menu ul {
+  list-style: none;  /* ● 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  margin: 12px 0;
+}
+
+.side-menu a {
+  text-decoration: none;  /* 밑줄 제거 */
+  color: #999;             /* 비활성 색상 */
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.side-menu a:hover {
+  color: #000;
+}
+
+.side-menu li.active a {
+  color: #000;
+  font-weight: bold;
+}
+
+/* 전체 레이아웃 */
+.departments {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+
+/* 부서 박스 */
+.department {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+/* 왼쪽 제목 */
+.department-title {
+  flex: 0 0 150px; /* 고정 너비 */
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  margin: 0;
+}
+
+/* 오른쪽 내용 */
+.department-content {
+  flex: 1;
+}
+
+/* 부서 설명 */
+.department-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: #555;
+}
+
+.department-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #666;
+}
+
+/* 구분선 */
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
